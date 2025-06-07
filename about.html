@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Über uns – 122 Records</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #121212;
+      z-index: 1000;
+    }
+    .nav-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      padding: 1rem 0;
+    }
+    .logo-img { max-height: 80px; }
+    .site-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-left: 1rem;
+      display: flex;
+      align-items: center;
+      color: #fff;
+    }
+    .site-title .prefix {
+      font-family: 'Orbitron', sans-serif;
+    }
+    .site-title .dot {
+      width: 12px;
+      height: 12px;
+      margin: 0 8px;
+      border-radius: 50%;
+      background: darkred;
+      animation: blink 1s infinite alternate;
+    }
+    @keyframes blink {
+      from { background: darkred; }
+      to { background: red; }
+    }
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      margin-left: auto;
+    }
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .nav-links a:hover {
+      color: #007bff;
+    }
+    .content {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      flex: 1 0 auto;
+    }
+    .image-row {
+      display: flex;
+      gap: 2rem;
+      justify-content: space-between;
+      margin: 2rem 0;
+    }
+    .image-row img {
+      width: 100%;
+      max-width: 440px;
+      height: auto;
+      display: block;
+    }
+    .content a {
+      color: #007bff;
+    }
+    footer {
+      margin-top: auto;
+      width: 100%;
+      text-align: center;
+      background: none;
+      color: #fff;
+    }
+    footer p {
+      margin: 0;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    .footer-bar {
+      background-color: #007bff;
+      padding: 1.5rem 0;
+      border-top: 1px solid #222;
+    }
+    .footer-bar a {
+      color: #fff;
+      margin: 0 1.5rem;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .footer-bar a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <img src="122-Records-Logo.png" alt="122 Records Logo" class="logo-img">
+      <span class="site-title"><span class="prefix">122</span><span class="dot"></span>Records</span>
+      <ul class="nav-links">
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="about.html">Über uns</a></li>
+        <li><a href="artists.html">Künstler</a></li>
+        <li><a href="releases.html">Veröffentlichungen</a></li>
+        <li><a href="news.html">Neuigkeiten</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+    <h1>Über uns</h1>
+    <div class="image-row">
+      <img src="images/about-image.jpg" alt="Über 122 Records">
+      <img src="images/about-image2.jpg" alt="122 Records Team">
+    </div>
+    <p>122 Records ist ein unabhängiges Musiklabel mit Fokus auf authentischem Deutschrap, Newcomer-Förderung und kreativem Content.</p>
+    <p>Wir veröffentlichen nicht nur Tracks – wir erzählen Geschichten, gestalten starke Marken und begleiten Artists auf ihrem künstlerischen Weg.</p>
+    <ul>
+      <li>🎧 Releases mit 200k+ Streams</li>
+      <li>🤝 Zusammenarbeit mit Künstlern, Musikern, Content Creator</li>
+      <li>🚀 Fokus: Digitaler Vertrieb, Cover-Art, Social Media & Artist Branding</li>
+    </ul>
+    <p>Mehr unter: <a href="https://instagram.com/122records" target="_blank">Instagram.com/122records</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 122 Records. Alle Rechte vorbehalten.</p>
+    <div class="footer-bar">
+      <a href="#">Impressum</a>
+      <a href="#">Datenschutz</a>
+      <a href="#">AGB</a>
+    </div>
+  </footer>
+</body>
+</html>

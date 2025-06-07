@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Releases - 122 Records</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; background: #121212; color: #fff; padding-top: 60px; }
+    nav { position: fixed; top: 0; left: 0; width: 100%; background: #121212; z-index: 1000; }
+    .nav-container { width: 90%; max-width: 1200px; margin: 0 auto; display: flex; align-items: center; padding: 1rem 0; }
+    .logo-img { max-height: 80px; }
+    .site-title { font-size: 1.5rem; font-weight: bold; margin-left: 1rem; display: flex; align-items: center; }
+    .site-title .prefix { font-family: 'Orbitron', sans-serif; }
+    .site-title .dot { width: 12px; height: 12px; margin: 0 8px; border-radius: 50%; background: darkred; animation: blink 1s infinite alternate; }
+    @keyframes blink { from { background: darkred; } to { background: red; } }
+    .nav-links { display: flex; gap: 1rem; list-style: none; margin: 0; padding: 0; margin-left: auto; }
+    .nav-links a { color: #fff; text-decoration: none; }
+    .nav-links a:hover { color: #007bff; }
+    main { max-width: 1200px; margin: 0 auto; padding: 4rem 1rem; }
+    h1 { font-size: 2rem; text-align: center; margin-bottom: 2rem; }
+    .release-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 2rem; }
+    .release-card { background: #1e1e1e; border-radius: 8px; overflow: hidden; text-align: center; padding: 1rem; transition: transform 0.2s; }
+    .release-card:hover { transform: translateY(-5px); }
+    .release-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; }
+    .release-card h3 { margin: 1rem 0 0.5rem; }
+    .release-card p { font-size: 0.9rem; color: #aaa; }
+    footer { background: #121212; text-align: center; padding: 1rem; }
+    @media (max-width: 768px) { .release-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .release-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <img src="122-Records-Logo.png" alt="Logo" class="logo-img" />
+      <span class="site-title"><span class="prefix">122</span><span class="dot"></span>Records</span>
+     <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="about.html">Über uns</a></li>
+        <li><a href="artists.html">Künstler</a></li>
+        <li><a href="releases.html">Veröffentlichungen</a></li>
+        <li><a href="news.html">Neuigkeiten</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Unsere Releases</h1>
+    <div class="release-grid">
+      <div class="release-card">
+        <img src="images/release1.jpg" alt="Release 1">
+        <h3>AUTOPISTA</h3>
+        <p>AVI5</p>
+      </div>
+      <div class="release-card">
+        <img src="images/release2.jpg" alt="Release 2">
+        <h3>Spirit Mind</h3>
+        <p>Taillow</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 122 Records. Alle Rechte vorbehalten.</p>
+  </footer>
+</body>
+</html>

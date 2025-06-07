@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>122 Records</title>
+  <!-- Import futuristic font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Global box-sizing */
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: #fff;
+      padding: 60px 5%; /* space for fixed nav and side padding */
+    }
+    /* Fixed Navigation */
+    nav { position: fixed; top: 0; left: 0; width: 100%; background: #121212; z-index: 1000; }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      padding: 1rem 0;
+    }
+    .logo-img { max-height: 80px; }
+    .site-title { font-size: 1.5rem; font-weight: bold; margin-left: 1rem; display: flex; align-items: center; color: #fff; }
+    .site-title .prefix { font-family: 'Orbitron', sans-serif; }
+    .site-title .dot { width: 12px; height: 12px; margin: 0 8px; border-radius: 50%; background: darkred; animation: blink 1s infinite alternate; }
+    @keyframes blink { from { background: darkred; } to { background: red; } }
+    .nav-links { display: flex; gap: 1rem; list-style: none; margin: 0; padding: 0; margin-left: auto; }
+    .nav-links a { color: #fff; text-decoration: none; }
+    .nav-links a:hover { color: #007bff; }
+    .menu-toggle { display: none; font-size: 1.5rem; cursor: pointer; }
+    section { padding: 4rem 0; }
+    /* Hero Section */
+    header#home { background: url('images/hero-artists.jpg') center/cover no-repeat; height: 400px; display: flex; align-items: center; justify-content: center; }
+    /* Artists Section */
+    #artists .container { text-align: center; }
+    /* Flex header for title & sort */
+    #artists-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+    #artists-header h2 { margin: 0; font-size: 2rem; }
+    #sortSelect { padding: 0.5rem 1rem; font-size: 1rem; border-radius: 4px; background: #1e1e1e; border: 1px solid #333; color: #fff; }
+    #artists .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1.5rem;
+    }
+    .artist-card {
+      background: #1e1e1e;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      transition: transform 0.2s;
+    }
+    .artist-card:hover { transform: translateY(-5px); }
+    .artist-card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    .artist-card h3 { margin: 0.5rem 0; font-size: 1rem; }
+    /* Footer */
+    footer { background: #121212; text-align: center; padding: 1rem; }
+    /* Responsive */
+    @media (max-width: 768px) { #artists-header { flex-direction: column; gap: 1rem; } }
+  </style>
+</head>
+<body>
+  <!-- Fixed Navigation Bar -->
+  <nav>
+    <div class="nav-container">
+      <img src="122-Records-Logo.png" alt="122 Records Logo" class="logo-img" />
+      <span class="site-title"><span class="prefix">122</span><span class="dot"></span>Records</span>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="about.html">Über uns</a></li>
+        <li><a href="artists.html">Künstler</a></li>
+        <li><a href="releases.html">Veröffentlichungen</a></li>
+        <li><a href="news.html">Neuigkeiten</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+      <div class="menu-toggle" id="menuToggle">☰</div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home"></header>
+
+  <main>
+    <section id="artists">
+      <div class="container">
+        <div id="artists-header">
+          <h2>Unsere Künstler</h2>
+          <select id="sortSelect">
+            <option value="asc">Sortieren A–Z</option>
+            <option value="desc">Sortieren Z–A</option>
+          </select>
+        </div>
+        <div class="grid" id="artistsGrid">
+          <div class="artist-card" data-name="Aaran">
+            <img src="images/artist1.jpg" alt="Aaran" />
+            <h3>AVI5</h3>
+          </div>
+          <!-- ... other 8 artists ... -->
+          <div class="artist-card" data-name="Taillow">
+            <img src="images/taillow.jpg" alt="Taillow" />
+            <h3>Taillow</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 122 Records. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Sorting functionality
+    const grid = document.getElementById('artistsGrid');
+    const select = document.getElementById('sortSelect');
+    select.addEventListener('change', () => {
+      const cards = Array.from(grid.children);
+      const asc = select.value === 'asc';
+      cards.sort((a, b) => {
+        const nameA = a.dataset.name.toUpperCase();
+        const nameB = b.dataset.name.toUpperCase();
+        return asc ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
+      });
+      cards.forEach(card => grid.appendChild(card));
+    });
+  </script>
+</body>
+</html>

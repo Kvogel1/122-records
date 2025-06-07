@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News - 122 Records</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; background: #121212; color: #fff; padding-top: 60px; }
+    nav { position: fixed; top: 0; left: 0; width: 100%; background: #121212; z-index: 1000; }
+    .nav-container { width: 90%; max-width: 1200px; margin: 0 auto; display: flex; align-items: center; padding: 1rem 0; }
+    .logo-img { max-height: 80px; }
+    .site-title { font-size: 1.5rem; font-weight: bold; margin-left: 1rem; display: flex; align-items: center; }
+    .site-title .prefix { font-family: 'Orbitron', sans-serif; }
+    .site-title .dot { width: 12px; height: 12px; margin: 0 8px; border-radius: 50%; background: darkred; animation: blink 1s infinite alternate; }
+    @keyframes blink { from { background: darkred; } to { background: red; } }
+    .nav-links { display: flex; gap: 1rem; list-style: none; margin: 0; padding: 0; margin-left: auto; }
+    .nav-links a { color: #fff; text-decoration: none; }
+    .nav-links a:hover { color: #007bff; }
+    main { max-width: 900px; margin: 0 auto; padding: 4rem 1rem; }
+    h1 { font-size: 2rem; text-align: center; margin-bottom: 2rem; }
+    .news-grid { display: flex; flex-direction: column; gap: 2rem; }
+    .news-card { background: #1e1e1e; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; }
+    .news-card img { width: 100%; height: 250px; object-fit: cover; }
+    .news-content { padding: 1rem; display: flex; flex-direction: column; gap: 0.5rem; }
+    .news-content h3 { margin: 0; }
+    .news-content p { font-size: 0.95rem; color: #ccc; }
+    .share-buttons { margin-top: 1rem; display: flex; gap: 1rem; }
+    .share-buttons a {
+      color: #fff;
+      background: #007bff;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      text-decoration: none;
+    }
+    .share-buttons a:hover { background: #0056b3; }
+    footer { background: #121212; text-align: center; padding: 1rem; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <img src="122-Records-Logo.png" alt="Logo" class="logo-img" />
+      <span class="site-title"><span class="prefix">122</span><span class="dot"></span>Records</span>
+     <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="about.html">Über uns</a></li>
+        <li><a href="artists.html">Künstler</a></li>
+        <li><a href="releases.html">Veröffentlichungen</a></li>
+        <li><a href="news.html">Neuigkeiten</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Neuigkeiten & Blog</h1>
+    <div class="news-grid">
+      <div class="news-card">
+        <img src="images/release1.jpg" alt="News Bild 1">
+        <div class="news-content">
+          <h3>"AUTOPISTA" - Neues Release von AVI5</h3>
+          <p>Unser Künstler AVI5 hat heute seine neue Single veröffentlicht – jetzt auf Spotify streamen!</p>
+          <div class="share-buttons">
+            <a href="#" onclick="window.open('https://twitter.com/intent/tweet?text=Check+out+this+new+release+by+AVI5!', '_blank')">Teilen auf Twitter</a>
+            <a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https://122records.de/news.html', '_blank')">Teilen auf Facebook</a>
+          </div>
+        </div>
+      </div>
+      <div class="news-card">
+        <img src="images/hero.jpg" alt="News Bild 2">
+        <div class="news-content">
+          <h3>Studio-Update: Behind the Scenes</h3>
+          <p>Ein exklusiver Blick hinter die Kulissen der neuesten Aufnahmesessions bei 122 Records.</p>
+          <div class="share-buttons">
+            <a href="#" onclick="window.open('https://twitter.com/intent/tweet?text=Behind+the+scenes+at+122+Records!', '_blank')">Teilen auf Twitter</a>
+            <a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https://122records.de/news.html', '_blank')">Teilen auf Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 122 Records. Alle Rechte vorbehalten.</p>
+  </footer>
+</body>
+</html>
